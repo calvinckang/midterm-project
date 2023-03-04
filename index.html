@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Circle | Empower Your Business With Stunning Design!">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
     <title>Circle - Home</title>
   </head>
 
@@ -15,7 +16,7 @@
         <nav>
             <a href="index.html"><img src="assets/logos/circle.svg" alt="Circle logo"></a>
             <ul>
-              <li><a href="index.html" class="nav-active">Home</a></li>
+              <li><a href="index.html" class="header-nav-link-active">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#services">Services</a></li>
             </ul>
@@ -57,13 +58,13 @@
       </section>
       <section id="projects">
         <h3>Recent Projects</h3>
-        <div class="project-cards">
+        <div class="card-container">
           <article class="card">
             <img src="assets/projects-section/1.jpg" alt="Illustration of the Simplify project">
             <div class="project-card-copy">
               <p class="body-medium">Simplify</p>
               <p class="headline-regular">UI Design & App Development</p>
-              <a href="projects/simplify.html" class="learn-more">Learn more</a>
+              <a href="projects/simplify.html" class="card-link">Learn more</a>
             </div>
           </article>
           <article class="card">
@@ -71,7 +72,7 @@
             <div class="project-card-copy">
               <p class="body-medium">Dashcoin</p>
               <p class="headline-regular">Web Development</p>
-              <a href="projects/dashcoin.html" class="learn-more">Learn more</a>
+              <a href="projects/dashcoin.html" class="card-link">Learn more</a>
             </div>
           </article>
           <article class="card">
@@ -79,7 +80,7 @@
             <div class="project-card-copy">
               <p class="body-medium">Vectorify</p>
               <p class="headline-regular">User Experience Design</p>
-              <a href="projects/vectorify.html" class="learn-more">Learn more</a>
+              <a href="projects/vectorify.html" class="card-link">Learn more</a>
             </div>
           </article>
         </div>
@@ -101,14 +102,14 @@
       </section>
       <section id="services">
         <h3>Our Services</h3>
-        <div class="services-card">
+        <div class="card-container">
           <article class="card">
             <div class="services-icon">
               <img src="assets/services-section/icons/1.svg" alt="">
             </div>
             <p class="body-medium">User Interface Design</p>
             <p class="body-regular">Circle provides you with a stunning user interface design that is accessible to everyone.</p>
-            <a class="learn-more" href="">Learn more</a>
+            <a class="card-link" href="">Learn more</a>
           </article>
           <article class="card">
             <div class="services-icon">
@@ -116,7 +117,7 @@
             </div>
             <p class="body-medium">User Experience Design</p>
             <p class="body-regular">Circle always focuses on delivering the best user experience to your customers.</p>
-            <a class="learn-more href="">Learn more</a>
+            <a class="card-link href="">Learn more</a>
           </article>
           <article class="card">
             <div class="services-icon">
@@ -124,7 +125,7 @@
             </div>
             <p class="body-medium">Application Development</p>
             <p class="body-regular">We develop high-quality mobile and web applications using the latest technology stack.</p>
-            <a class="learn-more href="">Learn more</a>
+            <a class="card-link href="">Learn more</a>
           </article>
         </div>
       </section>
@@ -132,10 +133,12 @@
         <h3>Do you have any questions?</h3>
         <p class="body-regular">Let us help you!</p>
         <form id="subscribe" method="post">
-          <i class="input-icon">
-            <svg fill="none" height="30" viewBox="0 0 30 30" width="30" xmlns="http://www.w3.org/2000/svg"><g stroke="#292e47" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.25"><path d="m25 25h-20c-1.375 0-2.5-1.125-2.5-2.5v-15c0-1.375 1.125-2.5 2.5-2.5h20c1.375 0 2.5 1.125 2.5 2.5v15c0 1.375-1.125 2.5-2.5 2.5z" stroke-linejoin="round"/><path d="m25 5h-20c-1.375 0-2.5 1.125-2.5 2.5l12.5 8.75 12.5-8.75c0-1.375-1.125-2.5-2.5-2.5z"/></g></svg>
-          </i>
-          <input class="headline-regular" type="email" id="email" name="email" placeholder="Enter your email">
+          <div class="input-field">
+            <i class="input-icon">
+              <svg fill="none" height="30" viewBox="0 0 30 30" width="30" xmlns="http://www.w3.org/2000/svg"><g stroke="#292e47" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.25"><path d="m25 25h-20c-1.375 0-2.5-1.125-2.5-2.5v-15c0-1.375 1.125-2.5 2.5-2.5h20c1.375 0 2.5 1.125 2.5 2.5v15c0 1.375-1.125 2.5-2.5 2.5z" stroke-linejoin="round"/><path d="m25 5h-20c-1.375 0-2.5 1.125-2.5 2.5l12.5 8.75 12.5-8.75c0-1.375-1.125-2.5-2.5-2.5z"/></g></svg>
+            </i>
+            <input class="headline-regular" type="email" id="email" name="email" placeholder="Enter your email">
+          </div>
           <button class="headline-medium" type="submit">Subscribe</button>
         </form>
       </section>
@@ -147,15 +150,15 @@
           <address class="headline-regular">2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
         </div>
         <ul>
-          <div>
-            <li><a class="nav-footer" href="">Team</a></li>
-            <li><a class="nav-footer" href="">Services</a></li>
-            <li><a class="nav-footer" href="">About Us</a></li>
+          <div class="footer-nav">
+            <li><a class="footer-nav-link" href="">Team</a></li>
+            <li><a class="footer-nav-link" href="">Services</a></li>
+            <li><a class="footer-nav-link" href="">About Us</a></li>
           </div>
-          <div>
-            <li><a class="nav-footer" href="">Press</a></li>
-            <li><a class="nav-footer" href="">Projects</a></li>
-            <li><a class="nav-footer" href="">Privacy Policy</a></li>
+          <div class="footer-nav">
+            <li><a class="footer-nav-link" href="">Press</a></li>
+            <li><a class="footer-nav-link" href="">Projects</a></li>
+            <li><a class="footer-nav-link" href="">Privacy Policy</a></li>
           </div>
         </ul>
       </nav>
