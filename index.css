@@ -1,4 +1,4 @@
-/* Section Hero */
+/* Hero Section */
 
 section#hero {
     display: flex;
@@ -45,44 +45,21 @@ section#hero div.hero-images img.hero-card-2 {
     box-shadow: 0 40px 80px 0 rgb(0 0 0 / 10%);
 }
 
-/* Section Logos */
+/* Clients Section */
 
-section#logos {
+section#clients {
     display: flex;
     justify-content: space-between;
 }
 
-section#logos div {
+section#clients div {
     display: flex;
     padding: 32px;
     filter: grayscale(1);
     border-radius: 20px;
 }
 
-/* Section Projects */
-
-section#projects {
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
-}
-
-section#projects article.card img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-
-section#projects article.card div.project-card-copy {
-    display: flex;
-    flex-direction: column;
-    padding: 32px;
-}
-
-section#projects article.card div.project-card-copy p {
-    margin-bottom: 16px;
-}
-
-/* Section Testimonial */
+/* Testimonial Section */
 
 section#testimonial {
     background-color: var(--color-neutral-dark);
@@ -155,7 +132,7 @@ section#testimonial img.memoji-4 {
     right: 8px;
 }
 
-/* Section Services */
+/* Services Section */
 
 section#services {
     display: flex;
@@ -177,59 +154,4 @@ section#services div.services-icon {
     max-height: 80px;
     padding: 20px;
     box-sizing: border-box;
-}
-
-/* Section Newsletter */
-
-section#newsletter {
-    background-color: var(--color-secondary-1);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 24px;
-    padding: 80px;
-}
-
-section#newsletter p {
-    color: var(--color-neutral-dark);
-}
-
-section#newsletter form {
-    display: flex;
-    margin: 32px 80px 0 80px;
-    gap: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-section#newsletter div.input-field {
-    display: flex;
-    flex: 1;
-    align-items: center;
-}
-
-section#newsletter i.input-icon {
-    display: flex;
-    padding: 24px;
-    position: absolute;
-}
-
-section#newsletter input {
-    display: flex;
-    padding: 32px 32px 32px 72px;
-    border: none;
-    flex: 1;
-    color: var(--color-neutral-dark);
-}
-
-section#newsletter input::placeholder {
-    color: var(--color-neutral-medium);
-}
-
-section#newsletter form button {
-    display: flex;
-    padding: 32px 56px;
-    color: var(--color-white);
-    background-color: var(--color-primary-default);
-    border: none;
 }
