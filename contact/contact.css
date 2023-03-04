@@ -1,0 +1,38 @@
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+main form#contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main form#contact div.contact-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+main form#contact div.contact-input-container-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+main form#contact input, main form#contact textarea {
+    display: flex;
+    padding: 24px;
+    border: none;
+    flex: 1;
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-medium-transparent);
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}

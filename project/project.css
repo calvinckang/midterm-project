@@ -33,6 +33,7 @@ section#main-project span.main-project-date-label {
 section#main-project img {
     max-height: 440px;
     object-fit: cover;
+    box-shadow: 0 16px 80px 0 rgb(0 0 0 / 20%);
 }
 
 section#main-project div.main-project-description {
