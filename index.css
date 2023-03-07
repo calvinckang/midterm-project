@@ -1,20 +1,21 @@
-/* Hero Section */
+/* HERO SECTION */
 
 section#hero {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
 }
 
 section#hero div.hero-copy {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 40px;
+    gap: 24px;
 }
 
 section#hero div.hero-copy div.hero-links {
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
 
 section#hero div.hero-images {
@@ -45,7 +46,26 @@ section#hero div.hero-images img.hero-card-2 {
     box-shadow: 0 40px 80px 0 rgb(0 0 0 / 10%);
 }
 
-/* Clients Section */
+@media screen and (min-width: 480px) {
+    section#hero div.hero-copy div.hero-links {
+        gap: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section#hero {
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section#hero div.hero-copy {
+        gap: 40px;
+    }
+}
+
+/* CLIENTS SECTION */
 
 section#clients {
     display: flex;
@@ -59,7 +79,7 @@ section#clients div {
     border-radius: 20px;
 }
 
-/* Testimonial Section */
+/* TESTIMONIAL SECTION */
 
 section#testimonial {
     background-color: var(--color-neutral-dark);
@@ -70,8 +90,8 @@ section#testimonial {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 64px;
-    padding: 80px 160px;
+    gap: 40px;
+    padding: 160px 32px;
     position: relative;
 }
 
@@ -105,34 +125,75 @@ section#testimonial p.profile-name {
 }
 
 section#testimonial img.memoji-1 {
-    width: 150px;
+    width: 120px;
     position: absolute;
     top: 8px;
-    left: 16px;
+    left: 0;
 }
 
 section#testimonial img.memoji-2 {
-    width: 150px;
+    width: 120px;
     position: absolute;
     top: 8px;
-    right: 16px;
+    right: 0;
 }
 
 section#testimonial img.memoji-3 {
-    width: 150px;
+    width: 120px;
     position: absolute;
     bottom: 8px;
-    left: 8px;
+    left: 0;
 }
 
 section#testimonial img.memoji-4 {
-    width: 150px;
+    width: 120px;
     position: absolute;
     bottom: 8px;
-    right: 8px;
+    right: 0;
 }
 
-/* Services Section */
+@media screen and (min-width: 480px) {
+    section#testimonial {
+        padding: 160px 80px;
+    }
+    section#testimonial img.memoji-1 {
+        width: 150px;
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
+    section#testimonial img.memoji-2 {
+        width: 150px;
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+    section#testimonial img.memoji-3 {
+        width: 150px;
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+    }
+    section#testimonial img.memoji-4 {
+        width: 150px;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section#testimonial {
+        gap: 64px;
+        padding: 80px 160px;
+    }
+}
+
+/* @media screen and (min-width: 1024px) {
+
+} */
+
+/* SERVICES SECTION */
 
 section#services {
     display: flex;
@@ -143,15 +204,39 @@ section#services {
 section#services article.card {
     display: flex;
     flex-direction: column;
-    padding: 32px;
-    gap: 24px;
+    padding: 24px;
+    justify-content: space-between;
+    max-height: 100%;
 }
 
 section#services div.services-icon {
     background-color: var(--color-neutral-light-blue);
     border-radius: 100%;
-    max-width: 80px;
-    max-height: 80px;
-    padding: 20px;
+    max-width: 64px;
+    max-height: 64px;
+    padding: 16px;
     box-sizing: border-box;
+}
+
+section#services p.body-medium {
+    margin: 16px 0;
+}
+
+/* @media screen and (min-width: 480px) {
+
+} */
+
+/* @media screen and (min-width: 768px) {
+
+} */
+
+@media screen and (min-width: 1024px) {
+    section#services article.card {
+        padding: 32px;
+    }
+    section#services div.services-icon {
+        max-width: 80px;
+        max-height: 80px;
+        padding: 20px;
+    }
 }

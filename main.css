@@ -1,4 +1,4 @@
-/* Global */
+/* GLOBAL */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
@@ -15,40 +15,45 @@
     --color-secondary-1: #FFC600;
     --color-secondary-2: #FCE300;
     --color-white: #FFFFFF;
-    --font-size-h1: 60px;
+    --font-size-h1-mobile: 40px;
+    --font-size-h1-tablet: 48px;
+    --font-size-h1-desktop: 60px;
     --font-size-h2: 50px;
-    --font-size-h3: 40px;
+    --font-size-h3-tablet: 32px;
+    --font-size-h3-desktop: 40px;
     --font-size-h4: 24px;
+    --font-size-body-regular-tablet: 18px;
+    --font-size-body-regular-desktop: 20px;
     --font-size-body-medium: 24px;
-    --font-size-body-regular: 20px;
-    --font-size-headline: 17px;
+    --font-size-headline-mobile: 15px;
+    --font-size-headline-tablet: 17px;
     --font-size-caption-1: 15px;
     --font-size-caption-2: 13px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: var(--color-neutral-light);
-    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
     color: var(--color-neutral-dark);
-    font-size: var(--font-size-h1);
+    font-size: var(--font-size-h1-mobile);
 }
 
 h3 {
     color: var(--color-neutral-dark);
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h3-tablet);
 }
 
 a {
     color: var(--color-neutral-medium);
-    font-size: var(--font-size-headline);
+    font-size: var(--font-size-headline-mobile);
     font-weight: 500;
     text-decoration: none;
 }
@@ -68,34 +73,34 @@ a.card-link {
     margin-top: 48px;
 }
 
+q {
+    color: var(--color-secondary-1);
+    font-size: var(--font-size-body-medium);
+}
+
 .btn-primary {
     background-color: var(--color-primary-default);
     color: var(--color-white);
-    padding: 16px 32px;
+    padding: 16px 20px;
 }
 
 .btn-secondary {
     color: var(--color-neutral-medium);
-    padding: 16px 32px;
+    padding: 16px 20px;
 }
 
 .btn-big {
     display: flex;
-    padding: 32px 56px;
+    padding: 24px;
     align-items: center;
     justify-content: center;
     background-color: var(--color-primary-default);
     border: none;
 }
 
-q {
-    color: var(--color-secondary-1);
-    font-size: var(--font-size-body-medium);
-}
-
 .body-regular {
     color: var(--color-neutral-medium);
-    font-size: var(--font-size-body-regular);
+    font-size: var(--font-size-body-regular-tablet);
     line-height: 1.5;
 }
 
@@ -127,12 +132,46 @@ img {
     width: 100%;
 }
 
-/* Header */
+@media screen and (min-width: 480px) {
+    h1 {
+        font-size: var(--font-size-h1-tablet);
+    }
+    a {
+        font-size: var(--font-size-headline-tablet);
+    }
+}
+
+/* @media screen and (min-width: 768px) {
+
+} */
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: var(--font-size-h1-desktop);
+    }
+    h3 {
+        font-size: var(--font-size-h3-desktop);
+    }
+    .btn-primary {
+        padding: 16px 32px;
+    }
+    .btn-secondary {
+        padding: 16px 32px;
+    }
+    .btn-big {
+        padding: 32px 56px;
+    }
+    .body-regular {
+        font-size: var(--font-size-body-regular-desktop);
+    }
+}
+
+/* HEADER */
 
 header {
     background-color: var(--color-neutral-light);
     margin: 24px auto 64px auto;
-    padding: 16px 40px;
+    padding: 8px 24px;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -150,27 +189,53 @@ header nav {
     flex-wrap: wrap;
 }
 
-header nav ul {
-    display: flex;
-    gap: 64px;
-    margin: 0 40px;
-    list-style-type: none;
+header nav img {
+    width: 150%;
 }
 
-/* Main */
+header nav ul {
+    display: none;
+}
+
+@media screen and (min-width: 480px) {
+    header {
+        padding: 16px 40px;
+    }
+    header nav img {
+        width: 200%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header nav img {
+        width: 100%;
+    }
+    header nav ul {
+        display: flex;
+        gap: 64px;
+        margin: 0 40px;
+        list-style-type: none;
+    }
+}
+
+/* @media screen and (min-width: 1024px) {
+
+} */
+
+/* MAIN */
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 80px;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 24px;
 }
 
 .card-container {
     display: flex;
-    gap: 40px;
+    gap: 32px;
     flex-wrap: wrap;
 }
 
@@ -178,89 +243,155 @@ main {
     background-color: var(--color-white);
     flex: 1;
     box-shadow: 0 40px 80px 0 rgb(0 0 0 / 10%);
+    min-width: 200px;
 }
 
-/* Projects Section */
+@media screen and (min-width: 480px) {
+    main {
+        padding: 0 40px;
+    }
+}
 
-section#projects {
+/* @media screen and (min-width: 768px) {
+
+} */
+
+@media screen and (min-width: 1024px) {
+    main {
+        gap: 120px;
+    }
+    .card-container {
+        gap: 40px;
+    }
+}
+
+/* PROJECTS SECTION */
+
+section.projects {
     display: flex;
     flex-direction: column;
     gap: 56px;
 }
 
-section#projects article.card img {
+section.projects article.card {
+    display: flex;
+    flex-direction: column;
+}
+
+section.projects article.card img {
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 
-section#projects article.card div.project-card-copy {
+section.projects article.card div.project-card-copy {
     display: flex;
     flex-direction: column;
-    padding: 32px;
+    padding: 24px;
+    justify-content: space-between;
+    height: 100%;
 }
 
-section#projects article.card div.project-card-copy p {
+section.projects article.card div.project-card-copy p {
     margin-bottom: 16px;
 }
 
-/* CTA Section */
+/* @media screen and (min-width: 480px) {
 
-section#cta {
+} */
+
+/* @media screen and (min-width: 768px) {
+
+} */
+
+@media screen and (min-width: 1024px) {
+    section.projects article.card div.project-card-copy {
+        padding: 32px;
+    }
+}
+
+/* CTA SECTION */
+
+section.cta {
     background-color: var(--color-secondary-1);
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 24px;
-    padding: 80px;
+    padding: 40px;
 }
 
-section#cta p {
+section.cta p {
     color: var(--color-neutral-dark);
 }
 
-section#cta form {
+section.cta form {
     display: flex;
-    margin: 32px 80px 0 80px;
+    margin: 0;
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-section#cta div.cta-input-field {
+section.cta div.cta-input-field {
     display: flex;
     flex: 1;
     align-items: center;
 }
 
-section#cta i.cta-input-icon {
+section.cta i.cta-input-icon {
     display: flex;
     padding: 24px;
     position: absolute;
 }
 
-section#cta input {
+section.cta input {
     display: flex;
-    padding: 32px 32px 32px 72px;
+    padding: 24px 24px 24px 64px;
     border: none;
     flex: 1;
     color: var(--color-neutral-dark);
 }
 
-section#cta input::placeholder {
+section.cta input::placeholder {
     color: var(--color-neutral-medium);
 }
 
-/* Footer */
+@media screen and (min-width: 480px) {
+    section.cta {
+        padding: 80px;
+    }
+    section.cta form {
+        margin: 32px 0 0 0;
+    }
+    section.cta input {
+        padding: 24px 24px 24px 72px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section.cta form {
+        margin: 32px 80px 0 80px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section.cta input {
+        padding: 32px 32px 32px 72px;
+    }
+}
+
+/* FOOTER */
 
 footer {
     max-width: 1100px;
-    margin: 160px auto 40px auto;
-    padding: 0 40px;
+    margin: 120px auto 40px auto;
+    padding: 0 24px;
 }
 
 footer nav {
     display: flex;
-    gap: 80px;
+    flex-direction: column;
+    gap: 64px;
     justify-content: space-between;
 }
 
@@ -281,11 +412,43 @@ footer nav address {
 footer nav ul {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 32px;
     list-style-type: none;
 }
 
 footer nav ul div.footer-nav {
     display: flex;
-    gap: 120px;
+    justify-content: space-between;
+}
+
+footer nav ul div.footer-nav li {
+    flex: 1;
+}
+
+@media screen and (min-width: 480px) {
+    footer {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer nav {
+        flex-direction: row;
+        gap: 80px;
+    }
+    footer nav ul {
+        gap: 48px;
+    }
+    footer nav ul div.footer-nav {
+        gap: 56px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        margin-top: 160px;
+    }
+    footer nav ul div.footer-nav {
+        gap: 120px;
+    }
 }

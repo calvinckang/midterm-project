@@ -1,4 +1,4 @@
-/* Main */
+/* MAIN */
 
 main {
     display: flex;
@@ -33,6 +33,5 @@ main form#contact input, main form#contact textarea {
     flex: 1;
     color: var(--color-neutral-dark);
     background-color: var(--color-neutral-medium-transparent);
-    font-family: 'Roboto', sans-serif;
     resize: none;
 }

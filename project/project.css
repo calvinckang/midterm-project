@@ -1,4 +1,4 @@
-/* Main Project Section */
+/* MAIN PROJECT SECTION */
 
 section#main-project {
     display: flex;
@@ -15,9 +15,10 @@ section#main-project div.main-project-copy {
 
 section#main-project div.main-project-info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
-    gap: 40px;
+    gap: 24px;
 }
 
 section#main-project p.main-project-subtitle {
@@ -41,3 +42,18 @@ section#main-project div.main-project-description {
     flex-direction: column;
     gap: 40px;
 }
+
+@media screen and (min-width: 480px) {
+    section#main-project div.main-project-info {
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+/* @media screen and (min-width: 768px) {
+
+} */
+
+/* @media screen and (min-width: 1024px) {
+
+} */
