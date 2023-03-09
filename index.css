@@ -79,12 +79,11 @@ section#clients div {
     min-width: 100px;
     padding: 24px;
     border-radius: 16px;
-    transition: 0.2s;
     filter: grayscale(1);
+    transition: 0.2s;
 }
 
 section#clients div:hover {
-    transition: 0.2s;
     filter: none;
     background-color: var(--color-white);
 }
@@ -113,6 +112,8 @@ section#testimonial {
     gap: 40px;
     padding: 160px 32px;
     position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 section#testimonial h3 {
@@ -144,30 +145,27 @@ section#testimonial p.profile-name {
     color: var(--color-primary-hover);
 }
 
-section#testimonial img.memoji-1 {
+section#testimonial img.memoji {
     width: 120px;
     position: absolute;
+}
+
+section#testimonial img.memoji-top-left {
     top: 8px;
     left: 0;
 }
 
-section#testimonial img.memoji-2 {
-    width: 120px;
-    position: absolute;
+section#testimonial img.memoji-top-right {
     top: 8px;
     right: 0;
 }
 
-section#testimonial img.memoji-3 {
-    width: 120px;
-    position: absolute;
+section#testimonial img.memoji-bottom-left {
     bottom: 8px;
     left: 0;
 }
 
-section#testimonial img.memoji-4 {
-    width: 120px;
-    position: absolute;
+section#testimonial img.memoji-bottom-right {
     bottom: 8px;
     right: 0;
 }
@@ -176,28 +174,19 @@ section#testimonial img.memoji-4 {
     section#testimonial {
         padding: 160px 80px;
     }
-    section#testimonial img.memoji-1 {
+    section#testimonial img.memoji {
         width: 150px;
-        position: absolute;
-        top: 8px;
+    }
+    section#testimonial img.memoji-top-left {
         left: 16px;
     }
-    section#testimonial img.memoji-2 {
-        width: 150px;
-        position: absolute;
-        top: 8px;
+    section#testimonial img.memoji-top-right {
         right: 16px;
     }
-    section#testimonial img.memoji-3 {
-        width: 150px;
-        position: absolute;
-        bottom: 8px;
+    section#testimonial img.memoji-bottom-left {
         left: 8px;
     }
-    section#testimonial img.memoji-4 {
-        width: 150px;
-        position: absolute;
-        bottom: 8px;
+    section#testimonial img.memoji-bottom-right {
         right: 8px;
     }
 }
@@ -206,6 +195,35 @@ section#testimonial img.memoji-4 {
     section#testimonial {
         gap: 64px;
         padding: 80px 160px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    section#testimonial div.profile {
+        gap: 16px;
+    }
+    section#testimonial img.profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+    section#testimonial img.memoji {
+        width: 170px;
+    }
+    section#testimonial img.memoji-top-left {
+        top: 8px;
+        left: 32px;
+    }
+    section#testimonial img.memoji-top-right {
+        top: 8px;
+        right: 32px;
+    }
+    section#testimonial img.memoji-bottom-left {
+        bottom: 8px;
+        left: 16px;
+    }
+    section#testimonial img.memoji-bottom-right {
+        bottom: 8px;
+        right: 16px;
     }
 }
 

@@ -4,7 +4,8 @@
 
 :root {
     --color-accent: #43D2FF;
-    --color-primary-default: #072AC8;
+    --color-primary-default-10: hsl(229, 93%, 41%);
+    --color-primary-default-20: hsl(229, 93%, 31%);
     --color-primary-hover: #A2D6F9;
     --color-primary-tapped: #D1EDFF;
     --color-neutral-dark: #292E47;
@@ -51,37 +52,58 @@ h3 {
     font-size: var(--font-size-h3-tablet);
 }
 
-a {
-    color: var(--color-neutral-medium);
-    font-size: var(--font-size-headline-mobile);
-    font-weight: 500;
-    text-decoration: none;
-}
-
-a.header-nav-link-active {
-    color: var(--color-primary-default);
-}
-
-a.footer-nav-link {
-    font-weight: 400;
-}
-
-a.card-link {
-    color: var(--color-primary-default);
-    font-size: var(--font-size-headline);
-    font-weight: 400;
-    margin-top: 48px;
-}
-
 q {
     color: var(--color-secondary-1);
     font-size: var(--font-size-body-medium);
 }
 
+a {
+    color: var(--color-neutral-medium);
+    font-size: var(--font-size-headline-mobile);
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.header-nav-link:hover {
+    color: var(--color-neutral-dark);
+}
+
+.header-nav-link-active {
+    color: var(--color-primary-default-10);
+}
+
+.header-nav-link-active:hover {
+    color: var(--color-primary-default-20);
+}
+
+.card-link {
+    color: var(--color-primary-default-10);
+    font-size: var(--font-size-headline);
+    font-weight: 400;
+    margin-top: 48px;
+}
+
+.card-link:hover {
+    color: var(--color-primary-default-20);
+}
+
+.footer-nav-link {
+    font-weight: 400;
+}
+
+.footer-nav-link:hover {
+    color: var(--color-neutral-dark);
+}
+
 .btn-primary {
-    background-color: var(--color-primary-default);
+    background-color: var(--color-primary-default-10);
     color: var(--color-white);
     padding: 16px 20px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-default-20);
 }
 
 .btn-secondary {
@@ -89,13 +111,22 @@ q {
     padding: 16px 20px;
 }
 
+.btn-secondary:hover {
+    background-color: var(--color-neutral-medium-transparent);
+}
+
 .btn-big {
     display: flex;
     padding: 24px;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-primary-default);
     border: none;
+    background-color: var(--color-primary-default-10);
+    transition: 0.2s;
+}
+
+.btn-big:hover {
+    background-color: var(--color-primary-default-20);
 }
 
 .body-regular {
@@ -220,17 +251,15 @@ main {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    max-width: 1100px;
-    margin: 64px auto 120px auto;
-    /* margin: 64px 0 120px 0; */
+    margin: 64px 0 120px 0;
     padding: 0 24px;
 }
 
-/* section {
+section {
     max-width: 1100px;
     width: 100%;
     margin: auto;
-} */
+}
 
 .card-container {
     display: flex;
@@ -242,8 +271,13 @@ main {
 .card {
     background-color: var(--color-white);
     flex: 1;
-    box-shadow: 0 40px 80px 0 rgb(0 0 0 / 10%);
     min-width: 200px;
+    box-shadow: 0 40px 80px 0 rgb(0 0 0 / 10%);
+    transition: 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 32px 48px 0 rgb(0 0 0 / 20%);
 }
 
 @media screen and (min-width: 480px) {
@@ -264,6 +298,12 @@ main {
     }
     .card-container {
         gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        padding: 0 80px;
     }
 }
 
@@ -312,6 +352,8 @@ section.cta {
     text-align: center;
     gap: 24px;
     padding: 40px;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 section.cta p {
@@ -330,6 +372,7 @@ section.cta div.cta-input-field {
     display: flex;
     flex: 1;
     align-items: center;
+    max-width: 892.5px;
 }
 
 section.cta i.cta-input-icon {
