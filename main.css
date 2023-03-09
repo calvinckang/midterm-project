@@ -484,9 +484,6 @@ footer nav ul div.footer-nav li {
 }
 
 @media screen and (min-width: 1024px) {
-    footer {
-        margin-top: 160px;
-    }
     footer nav ul div.footer-nav {
         gap: 64px;
     }
