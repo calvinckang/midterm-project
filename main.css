@@ -141,10 +141,6 @@ img {
     }
 }
 
-/* @media screen and (min-width: 768px) {
-
-} */
-
 @media screen and (min-width: 1024px) {
     h1 {
         font-size: var(--font-size-h1-desktop);
@@ -170,7 +166,7 @@ img {
 
 header {
     background-color: var(--color-neutral-light);
-    margin: 24px auto 64px auto;
+    margin: 24px auto 0 auto;
     padding: 8px 24px;
     position: sticky;
     top: 0;
@@ -218,10 +214,6 @@ header nav ul {
     }
 }
 
-/* @media screen and (min-width: 1024px) {
-
-} */
-
 /* MAIN */
 
 main {
@@ -229,12 +221,20 @@ main {
     flex-direction: column;
     gap: 80px;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 64px auto 120px auto;
+    /* margin: 64px 0 120px 0; */
     padding: 0 24px;
 }
 
+/* section {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+} */
+
 .card-container {
     display: flex;
+    flex-direction: column;
     gap: 32px;
     flex-wrap: wrap;
 }
@@ -252,9 +252,11 @@ main {
     }
 }
 
-/* @media screen and (min-width: 768px) {
-
-} */
+@media screen and (min-width: 768px) {
+    .card-container {
+        flex-direction: row;
+    }
+}
 
 @media screen and (min-width: 1024px) {
     main {
@@ -294,14 +296,6 @@ section.projects article.card div.project-card-copy {
 section.projects article.card div.project-card-copy p {
     margin-bottom: 16px;
 }
-
-/* @media screen and (min-width: 480px) {
-
-} */
-
-/* @media screen and (min-width: 768px) {
-
-} */
 
 @media screen and (min-width: 1024px) {
     section.projects article.card div.project-card-copy {
@@ -384,7 +378,7 @@ section.cta input::placeholder {
 
 footer {
     max-width: 1100px;
-    margin: 120px auto 40px auto;
+    margin: 0 auto 40px auto;
     padding: 0 24px;
 }
 
@@ -423,6 +417,7 @@ footer nav ul div.footer-nav {
 
 footer nav ul div.footer-nav li {
     flex: 1;
+    width: 120px;
 }
 
 @media screen and (min-width: 480px) {
@@ -435,12 +430,13 @@ footer nav ul div.footer-nav li {
     footer nav {
         flex-direction: row;
         gap: 80px;
+        align-items: center;
     }
     footer nav ul {
         gap: 48px;
     }
     footer nav ul div.footer-nav {
-        gap: 56px;
+        gap: 32px;
     }
 }
 
@@ -449,6 +445,6 @@ footer nav ul div.footer-nav li {
         margin-top: 160px;
     }
     footer nav ul div.footer-nav {
-        gap: 120px;
+        gap: 64px;
     }
 }

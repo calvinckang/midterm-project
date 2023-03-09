@@ -1,32 +1,32 @@
-/* MAIN */
+/* CONTACT FORM SECTION */
 
-main {
+section#contact-form {
     display: flex;
     flex-direction: column;
     gap: 80px;
 }
 
-main form#contact {
+section#contact-form form#contact {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-main form#contact div.contact-input-container {
+section#contact-form div.contact-input-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
     flex: 1;
 }
 
-main form#contact div.contact-input-container-row {
+section#contact-form div.contact-input-container-row {
     display: flex;
     flex-direction: row;
     gap: 40px;
     flex-wrap: wrap;
 }
 
-main form#contact input, main form#contact textarea {
+section#contact-form input, section#contact-form textarea {
     display: flex;
     padding: 24px;
     border: none;

@@ -23,28 +23,30 @@
       </nav>
     </header>
     <main>
-      <h1>Contact Us</h1>
-      <form id="contact" method="post">
-        <div class="contact-input-container">
-          <label for="name" class="body-regular">Full Name *</label>
-          <input class="headline-regular" type="text" id="name" name="name" placeholder="Enter your full name">
-        </div>
-        <div class="contact-input-container-row">
+      <section id="contact-form">
+        <h1>Contact Us</h1>
+        <form id="contact" method="post">
           <div class="contact-input-container">
-            <label for="email" class="body-regular">Email</label>
-            <input class="headline-regular" type="email" id="email" name="email" placeholder="Enter your email address">
+            <label for="name" class="body-regular">Full Name *</label>
+            <input class="headline-regular" type="text" id="name" name="name" placeholder="Enter your full name">
+          </div>
+          <div class="contact-input-container-row">
+            <div class="contact-input-container">
+              <label for="email" class="body-regular">Email</label>
+              <input class="headline-regular" type="email" id="email" name="email" placeholder="Enter your email address">
+            </div>
+            <div class="contact-input-container">
+              <label for="phone" class="body-regular">Phone</label>
+              <input class="headline-regular" type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
           </div>
           <div class="contact-input-container">
-            <label for="phone" class="body-regular">Phone</label>
-            <input class="headline-regular" type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            <label for="message" class="body-regular">Message</label>
+            <textarea class="headline-regular" id="message" name="message" rows="5" maxlength="500" placeholder="Write your message here..."></textarea>
           </div>
-        </div>
-        <div class="contact-input-container">
-          <label for="message" class="body-regular">Message</label>
-          <textarea class="headline-regular" id="message" name="message" rows="5" maxlength="500" placeholder="Write your message here..."></textarea>
-        </div>
-        <button class="headline-medium btn-big" type="submit">Submit</button>
-      </form>
+          <button class="headline-medium btn-big" type="submit">Submit</button>
+        </form>
+      </section>
     </main>
     <footer>
       <nav>
