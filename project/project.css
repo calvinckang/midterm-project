@@ -31,10 +31,22 @@ section#main-project span.main-project-date-label {
     color: var(--color-neutral-dark);
 }
 
+section#main-project div.main-project-image {
+    position: relative;
+}
+
 section#main-project img {
     max-height: 440px;
     object-fit: cover;
-    box-shadow: 0 16px 80px 0 rgb(0 0 0 / 20%);
+}
+
+section#main-project img.image-blur {
+    position: absolute;
+    filter: blur(40px);
+    opacity: 0.5;
+    top: 16px;
+    left: 0;
+    z-index: -1;
 }
 
 section#main-project div.main-project-description {
