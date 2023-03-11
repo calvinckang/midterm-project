@@ -28,21 +28,21 @@
         <form id="contact" method="post">
           <div class="contact-input-container">
             <label for="name" class="body-regular">Full Name *</label>
-            <input class="headline-regular" type="text" id="name" name="name" placeholder="Enter your full name">
+            <input class="headline-regular" type="text" id="name" name="name" placeholder="Enter your full name" required>
           </div>
           <div class="contact-input-container-row">
             <div class="contact-input-container">
               <label for="email" class="body-regular">Email</label>
-              <input class="headline-regular" type="email" id="email" name="email" placeholder="Enter your email address">
+              <input class="headline-regular" type="email" id="email" name="email" placeholder="Enter your email address" required>
             </div>
             <div class="contact-input-container">
               <label for="phone" class="body-regular">Phone</label>
-              <input class="headline-regular" type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+              <input class="headline-regular" type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
             </div>
           </div>
           <div class="contact-input-container">
             <label for="message" class="body-regular">Message</label>
-            <textarea class="headline-regular" id="message" name="message" rows="5" maxlength="500" placeholder="Write your message here..."></textarea>
+            <textarea class="headline-regular" id="message" name="message" rows="5" maxlength="500" placeholder="Write your message here..." required></textarea>
           </div>
           <button class="headline-medium btn-big" type="submit">Submit</button>
         </form>
