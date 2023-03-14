@@ -30,6 +30,7 @@
     --font-size-headline-tablet: 17px;
     --font-size-caption-1: 15px;
     --font-size-caption-2: 13px;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -309,7 +310,14 @@ section {
 
 /* PROJECTS SECTION */
 
-section.projects {
+section.projects span:target {
+    display: block;
+    position: relative;
+    top: -84px;
+    visibility: hidden;
+}
+
+section.projects div.projects-container, section#other-projects {
     display: flex;
     flex-direction: column;
     gap: 56px;
