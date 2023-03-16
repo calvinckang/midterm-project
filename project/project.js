@@ -28,6 +28,8 @@ window.onload = () => {
         projectContent.textContent = project.content;
         const projectImage = document.querySelector("div.main-project-image img");
         projectImage.setAttribute("src", project.image);
+        const projectImageBackground = document.querySelector("div.main-project-image img.image-blur");
+        projectImageBackground.setAttribute("src", project.image);
         const projectDate = document.querySelector("span.main-project-date");
         projectDate.textContent = project.completed_on;
     }
