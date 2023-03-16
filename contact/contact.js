@@ -7,15 +7,30 @@ window.onload = () => {
         const phone = document.querySelector("#phone").value;
         const message = document.querySelector("#message").value;
 
-        const newContact = {
+        const formData = {
             name,
             email,
             phone,
             message
-        };
-        console.log(newContact);
+        }
 
-        _saveContactData(newContact);
+        _validateForm(formData);
+    }
+
+    function _validateForm(formData) {
+        const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (formData.name === "Ironhack") {
+            alert("You cannot be Ironhack, because I am Ironhack.");
+            document.querySelector("#name").focus();
+        } else if (formData.email.match(mailFormat) || formData.email === "") {
+            console.log(formData);
+    
+            _saveContactData(formData);
+        } else {
+            alert("You have entered an invalid email address, make sure you type it correctly.");
+            document.querySelector("#email").focus();
+        }
     }
 
     function _saveContactData(contact) {
