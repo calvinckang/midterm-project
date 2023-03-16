@@ -20,12 +20,14 @@ window.onload = () => {
     function _validateForm(formData) {
         const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-        if (formData.name === "Ironhack") {
+        if (!formData.name) {
+            alert("Please enter your name.");
+            document.querySelector("#name").focus();
+        } else if (formData.name === "Ironhack") {
             alert("You cannot be Ironhack, because I am Ironhack.");
             document.querySelector("#name").focus();
         } else if (formData.email.match(mailFormat) || formData.email === "") {
             console.log(formData);
-    
             _saveContactData(formData);
         } else {
             alert("You have entered an invalid email address, make sure you type it correctly.");
